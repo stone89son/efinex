@@ -1,0 +1,971 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: white;
+    height: 100%;
+    letter-spacing: 1px;
+}
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(70,70,70,0.9);
+}
+
+.cover:hover {
+    cursor: default;
+}
+
+.take-order-tit-div {
+    font-size: 18px;
+    padding-left: 30px;
+    border-bottom: 1px solid black;
+    width: calc(100% - 30px);
+    display: flex;
+}
+
+.take-order-tit-div > h1 {
+    float: right;
+    margin-bottom: 0;
+    font-size: 17px;
+    color: rgb(255, 255, 255, 0.3);
+    margin-left: 240px;
+    margin-top: 24px;
+}
+
+.take-order-tit-div > h1:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255, 0.9);
+}
+
+.take-order-form > form > div > input {
+    height: 35px;
+    width: 82%;
+    margin-left: 30px;
+    border: transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.take-order-form > form > div > input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.order-id-fill {
+    font-size: 15px;
+    margin-left: 31px;
+}
+
+.amount-to-fill {
+    font-size: 11px;
+    margin-bottom: 5;
+    margin-left: 31px;
+}
+
+.take-order-form > form > div {
+    display: flex;
+}
+
+
+.order-id-expiration {
+    font-size: 15px;
+    margin-left: 31px;
+}
+
+.take-order-form > div {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: flex;
+}
+
+.take-order-form > form > div > h3 {
+    position: relative;
+    right: 60px;
+    margin: 0;
+    padding-top: 12px;
+    padding-left: 10px;
+    color: black;
+    width: 2px;
+    font-size: 12px;
+    border-left: 1px solid black;
+}
+
+
+.fill-take-order-cancel {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 132px;
+    border: none;
+    color: rgb(255, 255, 255, 0.3);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    border-radius: 3px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.fill-take-order-cancel:hover {
+    color: white;
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.fill-take-order-buy {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 180px;
+    border: none;
+    color: white;
+    background-color: rgb(68, 190, 36);
+    border-radius: 3px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+.fill-take-order-sell {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 180px;
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 3px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+.fill-take-order-sell:hover {
+    cursor: pointer;
+    background-color: rgb(255, 0, 0, 0.85);
+}
+
+.fill-take-order-buy:hover {
+    cursor: pointer;
+    background-color: rgb(68, 190, 36, 0.8);
+}
+
+.take-trade-box {
+    position: absolute;
+    z-index: 12;
+    left: calc(50% - 200px);
+    top: calc(45% - 200px);
+    background-color:  rgb(47, 61, 69);
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 340px;
+    width: 400px;
+}
+
+.take-trade-box:hover {
+    cursor: default;
+}
+
+.order-container {
+    height: 27px;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: solid 1px rgb(255, 255, 255, 0.3);
+    display: flex;
+}
+
+.order-container > h3 {
+    margin: 0;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+    font-size: 12px;
+}
+
+.order-container > h3:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.ababa {
+    height: calc(100% - 30px);
+    width: 100%;
+}
+
+.order-sell-list > div > ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.order-buy-list > div > ul {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.order-sell-list > div > ul > li > div {
+    margin-left: 10px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+.order-buy-list > div > ul > li > div {
+    margin-left: 10px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+.order-buy-list > div > ul > li:hover {
+    cursor: pointer;
+    font-weight: 10000;
+    color: rgb(255, 255, 255, 0.7);
+}
+
+
+.order-sell-list > div > ul > li:hover {
+    cursor: pointer;
+    font-weight: 10000;
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.order-sell-list > div > ul > li > div > h3 {
+    font-size: 11px;
+    margin: 0px;
+    padding-right: 50px;
+}
+
+.order-buy-list > div > ul > li > div > h3 {
+    font-size: 11px;
+    margin: 0px;
+    padding-right: 50px;
+}
+
+
+
+.order-sell-list > div > ul > li > div > div > h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.order-buy-list > div > ul > li > div > div > h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.trade-buy {
+    color: #00DF80;
+}
+
+.trade-sell {
+    color: #FF004E;
+}
+
+.price1 {
+    flex: 1 0px;
+    color: #FF004E;
+}
+
+.price2 {
+    flex: 1 0px;
+    color: #00DF80;
+}
+
+.amount1 {
+    flex: 1 0px;
+}
+
+.total1 {
+    flex: 1 0px;
+}
+
+.total1 > h3 {
+    float: right;
+}
+
+.order-book-selected {
+    background-color: rgb(47, 61, 69);;
+}
+
+#order-book {
+    overflow:hidden;
+    min-height: 0;
+    min-width: 0;
+}
+
+.container2 {
+    min-height: 0;
+    min-width: 0;
+    height:100%;
+    overflow-y: hidden;
+}
+
+
+.order-sell-list {
+    height: 47.3%;
+    margin: 0;
+    font-size: 9px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+}
+
+.order-sell-list::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.past-trades-div {
+    height: calc(100% - 40px);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.past-trades-ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    padding-top:10px;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.past-trade-div-single {
+    height: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.past-trade-div-single > h3 {
+    font-size: 11px;
+    align-self: center;
+    text-align: center;
+    display:inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.past-trades-ul::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+
+
+.order-buy-list {
+    height: 47.3%;
+    margin: 0;
+    font-size: 9px;
+    overflow-y: auto;
+    padding-left: 0px;
+}
+
+.order-buy-list::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.halfway-order-book > h3 {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.halfway-order-book {
+    text-align: center;
+    background-color: black;
+    height: 30px;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.past-trade-my-order-div {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.order-div {
+    display: inline-block;
+    height: 29px;
+    border-bottom: 1px solid white;
+}
+
+.order-div:hover {
+    cursor: pointer;
+}
+
+.past-trade-div:hover {
+    cursor: pointer;
+}
+
+.past-trade-div {
+    display: inline-block;
+    margin-left: 20px;
+    height: 29px;
+}
+
+.order-table {
+    position: relative;
+    top: 17px;
+    left: 1.5%;
+    height: calc(100%-17px);
+}
+
+
+#button-th {
+    padding-top: 4px;
+    
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    background-color: transparent;
+    color: #FF004E;
+    border: 1px solid #FF004E;
+}
+
+#my-orders {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#my-orders::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+#button-th:hover {
+    cursor: pointer;
+    background-color: #FF004E;
+    color: white;
+}
+
+.order-table > table {
+    font-size: 12px;
+    width: 95%;
+    right: 0px;
+}
+
+th {
+    padding: 0px;
+    height: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+
+td {
+    margin 0px;
+    padding: 0px;
+    height: 35px;
+    text-align: center;
+}
+
+#padding-th {
+    width: 15%;
+}
+
+#buy-sell {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buy-form-div {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: start;
+}
+
+.buy-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
+}
+
+.buy-input {
+    float: right;
+    height: 25px;
+    width: 67%;
+    margin-left: 2px;
+    color: white;
+    background-color: rgb(92, 101, 107);
+    border: 1px solid black;
+    height: 25px;
+    padding-left: 8px;
+}
+
+.buy-input::placeholder {
+    color: rgb(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.buy-form > div > button {
+    display: inline-block;
+    margin-left: 4px;
+    width: 16.5%;
+    float: right;
+    font-size: 9px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    background: none;
+    border:1px solid rgba(255, 255, 255, 0.4);
+}
+
+.buy-form > div > button:hover {
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.buy-form > div > label {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.buy-sell-but {
+    margin-top: 5px;
+    height: 180%;
+    
+    font-size:14px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    color: white;
+    background-color: rgb(68, 190, 36);
+    border:1px solid rgb(68, 190, 36); 
+}
+
+.buy-sell-but-sell {
+    margin-top: 5px;
+    height: 180%;
+    
+    font-size:14px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    color: white;
+    background-color: red;
+    border:1px solid red; 
+}
+
+.buy-sell-but-sell:hover {
+    cursor: pointer;
+}
+
+.buy-sell-but:hover {
+    cursor: pointer;
+}
+
+.buy-token-title {
+    font-size: 15px;
+}
+
+.dep-1 {
+    margin-top: 20px;
+}
+
+
+.Wallet-Balance-Box {
+    display: grid;
+    max-height: 100px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contract-balance {
+    display: grid;
+     max-height: 100px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#profile {
+    background-color: rgb(25, 33, 38);
+}
+
+.nums {
+    padding: 0px;
+    margin: 0px 15px 8px 15px;
+}
+
+.b {
+    float: right;
+}
+
+.dep-input::placeholder {
+    color: rgb(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.subtit-ass {
+    margin: 7px 11px 8px 15px;
+}
+
+.contract-title {
+    padding-left: 10px;
+    margin: 0px 0px 0px 0px;
+    align-self: center;
+    grid-column: 1/3;
+}
+
+.tit-h3 {
+    margin: 10px 4px;
+}
+
+.Wallet-Title {
+    padding-left: 10px;
+    align-self: center;
+    grid-column: 1/3;
+    border-top: 1px solid white;
+}
+
+#container {
+    position: absolute;
+    top: 44px;
+    width: 100%;
+    height: calc(100% - 44px);
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-auto-rows: 7fr 4fr;
+}
+
+#profile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+
+.deposit-withdraw-buts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/3;
+}
+
+.dep-but-h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.dep-selected {
+    background-color: rgb(255, 255, 255, 0.2);
+    
+    border-bottom: 1px solid white;
+}
+
+.dep-with-div {
+    height:25px;
+}
+
+.dep-with-div:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.deposit-tits {
+    grid-column: 1/3;
+    margin-bottom: 5px;
+    margin-left: 14px;
+}
+
+.deposit-withdraw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dep-2 {
+    margin-bottom: 10px;
+}
+
+.dep-with-but {
+    font-size:12px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    height: 27px;
+    width: 40%;
+    margin-left: 5px;
+    color: rgba(255, 255, 255, 0.4);
+    background: none;
+    border:1px solid rgba(255, 255, 255, 0.4); 
+    
+}
+
+.dep-with-but:hover {
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.dep-input {
+    color: white;
+    width: 50%;
+    background-color: rgb(92, 101, 107);
+    border: 1px solid black;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.dep-form {
+    grid-column: 1/3;
+    margin-left: 14px;
+}
+
+#container > div {
+    background-color: rgb(25, 33, 38);
+    border-right: 3px solid rgb(0, 0, 0, 0.4);
+
+    border-top: 3px solid rgb(0, 0, 0, 0.4);
+}
+
+
+#buy-sell-target {
+    grid-column: 2/4;
+}
+
+
+.login-titles {
+    position: absolute;
+    right: 140px;
+    margin: 0;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 1159px) {
+    .price-banner {
+        display: none;
+    }
+        .time {
+        display: none;
+    }
+    .login-div {
+        margin: 0;
+        font-size: 12px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0px;
+        right: 2%;
+    }
+    .loggedin-div {
+        margin: 0;
+        font-size: 10px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0px;
+        right: 2%;
+    }
+}
+
+@media only screen and (max-width: 1242px) and (min-width: 1159px) {
+    .time {
+        display: none;
+    }
+    .login-div {
+        margin: 0;
+        font-size: 10px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0px;
+        right: 2%;
+    }
+    .loggedin-div {
+        margin: 0;
+        font-size: 10px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0px;
+        right: 2%;
+    }
+    .price-banner {
+        display:inline-block;
+        margin: 0;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+}
+
+#top-banner-id {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    height:44px;
+    width: 100%;
+    left: 0%;
+    background-color: rgb(25, 33, 3);
+}
+
+
+.top-top-banner {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+}
+@media only screen and (min-width: 1242px) {
+    .time {
+        display:inline-block;
+        margin: 0;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    .login-div {
+        margin: 0;
+        font-size: 12px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0px;
+        right: 2%;
+    }
+    
+    .loggedin-div {
+        margin: 0;
+        font-size: 10px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0px;
+        right: 2%;
+    }
+    
+    
+    .price-banner {
+        display:inline-block;
+        margin: 0;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+}
+
+.banner-titles {
+    display:inline-block;
+    margin: 0;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.search-for-coin-form {
+    display:inline-block;
+    padding-left: 45px;
+    padding-top: -0px;
+    margin: 0;
+    position: absolute;
+    top: 9px;
+}
+
+
+.account-select {
+    font-size:12px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    margin-left: -4px;
+    color: white;
+    border: none;
+    padding-left: 0;
+    background-color: rgb(25, 33, 38);
+}
+
+
+.login-but {
+    font-size:12px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    height: 25px;
+    width: 90px;
+    color: rgba(255, 255, 255, 0.4);
+    background: none;
+    border:1px solid rgba(255, 255, 255, 0.4); 
+}
+
+.logout {
+    position: absolute;
+    width: 120px;
+    top: 10px;
+    right: 2%;
+}
+
+.login-but:hover {
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.login-stuff {
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.login-with {
+    margin: 0;
+}
+
+.search-submit {
+    font-size:12px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+    height: 28px;
+    margin: 0;
+    margin-left: 1px;
+    padding: 0;
+    width: 120px;
+    color: white;
+    background: rgb(68, 190, 36);
+    border: none;
+}
+
+.search-submit:hover {
+    cursor: pointer;
+}
+
+.coin-symbol {
+    background-color: rgb(92, 101, 107);
+    border: 1px solid black;
+    height: 26px;
+    width:120px;
+    padding-left: 8px;
+    color: white;
+}
+
+.coin-contract {
+    background-color: rgb(92, 101, 107);
+    border: 1px solid black;
+    height: 26px;
+    width: 170px;
+    color: white;
+    padding-left: 8px;
+}
+
+.coin-contract::placeholder {
+    color: rgb(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.coin-symbol::placeholder {
+    color: rgb(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-style: italic;
+}
